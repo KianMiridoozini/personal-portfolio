@@ -1,38 +1,250 @@
+/* Custom fonts */
+@font-face {
+  font-family: "inconsolata";
+  src: url("./assets/fonts/Inconsolata_SemiExpanded-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "inconsolata";
+  src: url("./assets/fonts/Inconsolata_SemiExpanded-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "inconsolata";
+  src: url("./assets/fonts/Inconsolata-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+:root {
+  --primary-color: 4, 14, 24;
+  --secondary-color: 245, 245, 245;
+  --tertiary-color: 255, 64, 129;
+  --quaternary-color: 255, 149, 0;
+  --quinary-color: 47, 204, 112;
+
+  --primary-color-2: 12, 88, 152;
+  --secondary-color-2: 61, 61, 61;
+  --tertiary-color-2: 173, 7, 49;
+  --quaternary-color-2: 187, 74, 2;
+  --quinary-color-2: 190, 244, 211;
+}
+
+
+/* Default styles */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--quaternary-color)) rgba(var(--primary-color));
+}
+section{
+  padding-bottom: 150px;
+}
+
+
+p{
+  margin: 1em 0 0 !important;
+    line-height: 1.6 !important;
+}
+
 .App {
-  text-align: center;
+  position: relative; /* Establish stacking context */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Full screen overlay for the loading screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(var(--primary-color));
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(500px);
+  transition: opacity 0.9s ease-out; /* Adjust the duration if needed */
+  
+}
+.loading-screen.fade-out {
+  opacity: 0;
+  filter: blur(0);
 }
 
-.App-link {
-  color: #61dafb;
+
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  color: rgba(var(--quaternary-color));
+}
+  .loader:before,
+  .loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 0.6s spin linear infinite;
+  }
+  .loader:after {
+    color: rgba(var(--tertiary-color));
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+  }
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+  }
+}
+
+
+
+.App::before {
+  content: "";
+  position: fixed; /* Fixed to viewport for parallax effect */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/img/banner-bg-neon2.jpg') no-repeat center center/cover;
+  z-index: -10; /* Behind all other content */
+}
+
+body{
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: rgba(var(--primary-color)) !important;
+  color: rgba(var(--secondary-color)) !important;
+  font-family: 'inconsolata', monospace !important;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p, a, li, button, ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  /* h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.9rem;
+  } */
+   p{
+    font-size: 0.9rem !important;
+   }
+   section{
+    padding-bottom: 50px;
+   }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+@media (min-width:1700px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+}
+
+p.success {
+	color: rgba(var(--quinary-color));
+}
+
+p.danger {
+	color: rgba(var(--tertiary-color));
+}
+
+
+

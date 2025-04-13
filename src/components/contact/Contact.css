@@ -1,0 +1,180 @@
+/* ============================== */
+/*          Contact Section       */
+/* ============================== */
+
+#contact {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 150px;
+  z-index: 1;
+}
+
+#contact::before,
+#contact::after {
+  content: "";
+  width: 25rem;
+  height: 25rem;
+  border-radius: 0.65rem;
+  position: absolute;
+  z-index: -1;
+  filter: blur(180px);
+  opacity: 0.6;
+}
+
+#contact::before {
+  background: rgba(var(--quaternary-color-2), 0.5); /* Orange accent */
+  top: 10%;
+  left: 5%;
+}
+
+#contact::after {
+  background: rgba(var(--primary-color-2), 0.5); /* Blue accent */
+  bottom: 5%;
+  right: 5%;
+}
+
+#contact h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: rgba(var(--secondary-color));
+}
+@media (max-width: 768px) {
+  #contact h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(var(--primary-color), 0.5);
+  border: 1px solid rgba(var(--secondary-color), 0.4);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease;
+}
+#contact form:hover {
+  border: 1px solid rgba(var(--tertiary-color), 0.4);
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  font-family: "inconsolata", monospace;
+  font-size: 16px;
+  color: rgba(var(--secondary-color));
+  background-color: rgba(
+    var(--primary-color),
+    0.7
+  ); /* Darker input background */
+  border: 1px solid rgba(var(--secondary-color), 0.3);
+  border-radius: 5px;
+  padding: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact input[type="text"]::placeholder,
+#contact input[type="email"]::placeholder,
+#contact textarea::placeholder {
+  color: rgba(var(--secondary-color), 0.6); /* Lighter placeholder text */
+  opacity: 1; /* Ensure placeholder is visible */
+}
+
+#contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus {
+  outline: none; /* Already in app.css, but good practice */
+  border-color: rgba(var(--quaternary-color), 0.8); /* Orange focus border */
+  box-shadow: 0 0 8px rgba(var(--quaternary-color), 0.5); /* Orange focus glow */
+}
+
+#contact textarea {
+  min-height: 150px; /* Set a minimum height for the textarea */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+#contact button[type="submit"] {
+  font-family: "inconsolata", monospace;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgba(var(--primary-color)); /* Dark text for contrast */
+  background-color: rgba(var(--quaternary-color)); /* Orange background */
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: center;
+  width: 30%;
+  margin-top: 10px; /* Add some space above the button */
+}
+
+#contact button[type="submit"]:hover {
+  background-color: rgba(
+    var(--quaternary-color-2)
+  ); /* Darker orange on hover */
+  /* color: rgba(var(--secondary-color)); */ /* Optional: change text color on hover */
+  transform: scale(1.03); /* Slight scale effect on hover */
+}
+
+/* Styling for the status messages */
+#contact form p {
+  text-align: center;
+  margin-top: 15px !important; /* Ensure spacing from button */
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#contact form p:first-of-type {
+  /* Target the success message specifically if needed */
+  background-color: rgba(
+    var(--quinary-color),
+    0.1
+  ); /* Faint green background */
+  border: 1px solid rgba(var(--quinary-color), 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #contact form {
+    padding: 25px; /* Reduce padding on smaller screens */
+    gap: 15px; /* Reduce gap */
+  }
+
+  #contact input[type="text"],
+  #contact input[type="email"],
+  #contact textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  #contact button[type="submit"] {
+    font-size: 16px;
+    padding: 12px 25px;
+    align-self: stretch; /* Make button full width */
+    text-align: center;
+  }
+
+  #contact form p {
+    font-size: 0.9rem !important; /* Match app.css */
+  }
+
+  /* Adjust blur effect shapes */
+  #contact::before,
+  #contact::after {
+    width: 18rem;
+    height: 18rem;
+    filter: blur(150px);
+    opacity: 0.5;
+  }
+
+}

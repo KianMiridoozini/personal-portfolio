@@ -1,0 +1,119 @@
+/************ Projects Css ************/
+/* For photo and design projects */
+.photo-imgbx,
+.design-imgbx {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9; /* Fixed height ensures uniform display */
+  overflow: hidden;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.photo-imgbx img,
+.design-imgbx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops & scales image to fill container */
+  transition: transform 0.3s ease-in-out;
+}
+
+.photo-imgbx:hover,
+.design-imgbx:hover {
+    box-shadow: 0 5px 10px rgba(var(--tertiary-color-2), 0.5);
+}
+
+
+.project {
+  padding: 80px 0;
+  position: relative;
+  background-color: rgba(var(--primary-color));
+}
+.project h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+.project p {
+  color: rgba(var(--secondary-color-2));
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+}
+
+.proj-imgbx,
+.photo-imgbx,
+.design-imgbx{
+  position: relative;
+  border-radius: 0.65rem;
+  opacity: 0.8;
+  border: 1px solid rgba(var(--tertiary-color));
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.proj-imgbx::before {
+  content: "";
+  background: linear-gradient(
+    180deg,
+    rgba(var(--tertiary-color), 0.7) -20%,
+    rgba(var(--tertiary-color-2), 0.7) 100%
+  );
+  backdrop-filter: brightness(0.5) blur(8px);
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+.proj-imgbx:hover::before {
+  height: 100%;
+}
+.proj-txtx {
+  position: absolute;
+  text-align: center;
+  padding: 5rem;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+.proj-imgbx:hover .proj-txtx {
+  top: 50%;
+  opacity: 1;
+}
+.proj-txtx h4 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+.proj-txtx span {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+}
+.background-image-right {
+  top: 20%;
+  position: absolute;
+  bottom: 0;
+  width: 35%;
+  right: 0;
+  z-index: -4;
+}
+.proj-txtx a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 1rem;
+  color: rgba(var(--primary-color));
+  transition: 0.2s ease-in-out;
+}
+.proj-txtx a:hover {
+  font-weight: 800;
+  color: rgba(var(--quaternary-color));
+}
