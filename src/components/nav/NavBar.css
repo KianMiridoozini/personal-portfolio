@@ -164,4 +164,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   nav.navbar a.navbar-brand {
     width: 20%;
   }
+
+  .social-icon{
+    display: flex;
+  }
+
+  .navbar-text {
+    justify-content: space-between;
+  }
 }

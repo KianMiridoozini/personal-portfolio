@@ -117,3 +117,28 @@
   font-weight: 800;
   color: rgba(var(--quaternary-color));
 }
+
+@media (max-width: 768px) {
+  .proj-txtx {
+    padding: 2rem;
+  }
+
+  .project h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .project p {
+    width: 90%;
+    font-size: 16px;
+  }
+  .proj-txtx h4 {
+    font-size: 25px;
+  }
+  .proj-txtx a {
+    font-size: 16px;
+  }
+
+  .proj-txtx-content{
+    margin-bottom: 3%;
+  }
+}

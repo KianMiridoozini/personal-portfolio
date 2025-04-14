@@ -21,21 +21,25 @@
     transition: 0.3s ease-in-out;
     text-align: center;
     z-index: 0;
+    will-change: color, transform;
+
   }
   .project-container .nav.nav-pills .nav-link::before {
     content: "";
     position: absolute;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(var(--tertiary-color-2), 0.5) 0%, rgba(var(--primary-color), 0.5) 150% );
-    top: 0;
-    left: 0;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(var(--tertiary-color-2), 0.5) 0%, rgba(var(--primary-color), 0.5) 150%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
     z-index: -1;
-    transition: 0.3s ease-in-out;
+    will-change: transform;
   }
+  
   .project-container .nav.nav-pills .nav-link.active::before {
-    width: 100% !important;
+    transform: scaleX(1);
   }
+  
   .project-container .nav.nav-pills .nav-link.active {
     border: 2px solid rgba(var(--quaternary-color), 0.5);
   }

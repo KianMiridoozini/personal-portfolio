@@ -48,7 +48,7 @@ export const Projects = () => {
             <Col>
               <h3>Projects</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos incidunt enim eaque recusandae, amet laborum consequuntur quam dignissimos ratione deleniti doloremque vitae dolorem officia a repellendus architecto explicabo sequi laudantium?
+                Here are a few projects I've worked on throughout my education and personal journey. For more web projects, please check out my <a style={{ color: 'white', textDecoration: 'underline', fontWeight: 'semibold' }} href="https://github.com/kianmiridoozini">GitHub</a>.
               </p>
               <Tab.Container id="projects-tabs" defaultActiveKey="web">
                 <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center">
