@@ -120,22 +120,13 @@
 
 @media (max-width: 768px) {
   .proj-txtx {
-    padding: 2rem;
-  }
-
-  .project h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-  .project p {
-    width: 90%;
-    font-size: 16px;
+    padding: 2rem 1rem;
   }
   .proj-txtx h4 {
     font-size: 25px;
   }
-  .proj-txtx a {
-    font-size: 16px;
+  .proj-txtx span {
+    font-size: 14px;
   }
 
   .proj-txtx-content{
