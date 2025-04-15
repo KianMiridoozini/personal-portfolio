@@ -114,6 +114,7 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
   align-self: center;
   width: 30%;
+  max-width: 120px;
   margin-top: 10px; /* Add some space above the button */
 }
 
@@ -159,7 +160,7 @@
 
   #contact button[type="submit"] {
     font-size: 16px;
-    padding: 12px 25px;
+    padding: 5%;
     align-self: stretch; /* Make button full width */
     text-align: center;
   }

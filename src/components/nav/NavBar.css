@@ -13,6 +13,9 @@ nav.navbar.scrolled {
 }
 nav.navbar a.navbar-brand {
   width: 9%;
+  & img {
+    width: 100%;
+  }
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -163,6 +166,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   nav.navbar a.navbar-brand {
     width: 20%;
+    & img {
+      width: 100%;
+    }
   }
 
   .social-icon{

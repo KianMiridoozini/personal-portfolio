@@ -3,16 +3,19 @@
   font-family: "inconsolata";
   src: url("./assets/fonts/Inconsolata_SemiExpanded-Black.ttf") format("truetype");
   font-weight: 900;
+  font-display: swap;
 }
 @font-face {
   font-family: "inconsolata";
   src: url("./assets/fonts/Inconsolata_SemiExpanded-Bold.ttf") format("truetype");
   font-weight: 700;
+  font-display: swap;
 }
 @font-face {
   font-family: "inconsolata";
   src: url("./assets/fonts/Inconsolata-Regular.ttf") format("truetype");
   font-weight: 400;
+  font-display: swap;
 }
 
 :root {

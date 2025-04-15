@@ -32,7 +32,7 @@ export const ProjectCard = ({ title, description, imgUrl, link, category, openMo
         <img src={imgUrl} alt={title} />
         <div className="proj-txtx">
           <div className="proj-txtx-content">
-          <h4>{title}</h4>
+          <h3>{title}</h3>
           <span>{description}</span>
           </div>
           <a href={link} target="_blank" rel="noopener noreferrer">View Project</a>

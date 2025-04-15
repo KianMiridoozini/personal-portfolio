@@ -3,8 +3,11 @@
     background: linear-gradient(180deg, rgba(var(--tertiary-color)) 80%, transparent);
 }
 
-#education h3 {
+#education h2 {
         margin-bottom: 1.5rem;
+}
+#education h4 {
+        opacity: 0.5;
 }
     
 

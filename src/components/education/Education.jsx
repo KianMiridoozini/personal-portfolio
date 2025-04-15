@@ -8,7 +8,7 @@ import { EDUCATION } from './../../utils/data';
 const EducationTimeline = () => {
   return (
     <section id="education" className="container">
-        <h3>Education</h3>
+        <h2>Education</h2>
 
     <VerticalTimeline>
       {EDUCATION.map((edu, index) => (

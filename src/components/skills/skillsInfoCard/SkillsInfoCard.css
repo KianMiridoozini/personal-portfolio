@@ -9,7 +9,7 @@
     box-shadow: 0 5px 10px rgba(var(--tertiary-color-2), 0.5);
 }
 
-.skills-info-card h6 {
+.skills-info-card h3 {
     font-size: 1.2rem;
     font-weight: 600;
     padding: 0.8rem 2rem;
@@ -60,7 +60,7 @@
 
 @media (max-width: 1025px) {
 
-    .skills-info-card h6 {
+    .skills-info-card h3 {
         font-size: 1.1rem;
     }
     .skills-info-content {

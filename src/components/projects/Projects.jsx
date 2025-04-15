@@ -46,7 +46,7 @@ export const Projects = () => {
         <Container>
           <Row>
             <Col>
-              <h3>Projects</h3>
+              <h2>Projects</h2>
               <p>
                 Here are a few projects I've worked on throughout my education and personal journey. For more web projects, please check out my <a style={{ color: 'white', textDecoration: 'underline', fontWeight: 'semibold' }} href="https://github.com/kianmiridoozini">GitHub</a>.
               </p>
