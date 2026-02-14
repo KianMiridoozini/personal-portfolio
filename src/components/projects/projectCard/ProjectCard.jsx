@@ -19,7 +19,7 @@ export const ProjectCard = ({ title, description, imgUrl, link, category, openMo
     return (
       <Col sm={8} md={6}>
         <div className={containerClass} onClick={openModal}>
-          <img src={imgUrl} alt={title || 'project image'} />
+          <img src={imgUrl} alt={title || 'project image'} loading="lazy" decoding="async" />
         </div>
       </Col>
     );
@@ -29,7 +29,7 @@ export const ProjectCard = ({ title, description, imgUrl, link, category, openMo
   return (
     <Col sm={8} md={6}>
       <div className={containerClass}>
-        <img src={imgUrl} alt={title} />
+        <img src={imgUrl} alt={title} loading="lazy" decoding="async" />
         <div className="proj-txtx">
           <div className="proj-txtx-content">
           <h3>{title}</h3>

@@ -5,6 +5,7 @@ import { Banner } from './components/banner/Banner';
 import { Projects } from './components/projects/Projects';
 import Skills from './components/skills/Skills';
 import Education from './components/education/Education';
+import Experience from './components/experience/Experience';
 import  ContactForm  from './components/contact/Contact';
 import { Footer } from './components/footer/Footer';
 
@@ -15,7 +16,7 @@ function App() {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const simulatedDelay = 500; // 3 seconds delay for demo
+    const simulatedDelay = 500;
 
     const handleLoad = () => {
       setTimeout(() => {
@@ -41,6 +42,7 @@ function App() {
       <NavBar />
       <Banner />
       <Skills />
+      <Experience />
       <Education />
       <Projects />
       <ContactForm />

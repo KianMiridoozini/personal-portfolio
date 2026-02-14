@@ -3,7 +3,13 @@ import frontEndIcon from '../assets/img/front-end-icon.svg';
 import backEndIcon from '../assets/img/back-end-icon.svg';
 import toolsIcon from '../assets/img/tools-icon.svg';
 import interpersonalIcon from '../assets/img/interpersonal-skills-icon.svg';
+// experience logos
+import ITMesterenLogo from '../assets/img/ITmesteren-logo.png';
+import BrandBarLogo from '../assets/img/brand-bar-logo.png';
+
+// education logos
 import easvIcon from '../assets/img/EASV-logo.png';
+import seaIcon from '../assets/img/s-e-a-logo.png';
 /**** Projects ****/
 /*** Web ***/ 
 import web_1 from '../assets/img/projects/web/portfolio/portfolio.webp';
@@ -77,7 +83,12 @@ export {
     backEndIcon,
     toolsIcon,
     interpersonalIcon,
+    // experience logos
+    ITMesterenLogo,
+    BrandBarLogo,
+    // education logos
     easvIcon,
+    seaIcon,
     //// Project Images
     ///web
     web_1,

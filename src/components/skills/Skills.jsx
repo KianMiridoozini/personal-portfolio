@@ -14,8 +14,8 @@ const Skills = () => {
 return (
     <section id="skills" className="container">
         <div className="skills-container">
-        <h2>Technical Proficency</h2>
-        <small>NOTE: Skills are difficult to quantify, therefor I have listed them based on my confidence level at current time.</small>
+        <h2>Technical Proficiency</h2>
+        <small>NOTE: Skills are difficult to quantify; therefore, the levels below are self-assessed at the current time.</small>
         <br /><br /><br />
 
         <div className="skills-content">

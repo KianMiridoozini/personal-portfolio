@@ -22,7 +22,7 @@ export const NavBar = () => {
   }, []);
 
   useEffect(() => {
-    const sections = ["home", "skills", "education", "projects", "contact"];
+    const sections = ["home", "skills", "experience", "education", "projects", "contact"];
     const options = { threshold: 0.6 };
 
     const observer = new IntersectionObserver((entries) => {
@@ -56,7 +56,7 @@ export const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            {["home", "skills", "education", "projects"].map((section) => (
+            {["home", "skills", "experience", "education", "projects"].map((section) => (
               <Nav.Link
                 key={section}
                 as={HashLink}
@@ -74,13 +74,13 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/in/kian-miridoozini/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/kian-miridoozini/" target="_blank" rel="noopener noreferrer" aria-label="Kian Miridoozini on LinkedIn">
                 <img src={navIcon1} alt="link to Kian's LinkedIn" />
               </a>
-              <a href="https://github.com/KianMiridoozini" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/KianMiridoozini" target="_blank" rel="noopener noreferrer" aria-label="Kian Miridoozini on GitHub">
                 <img src={navIcon2} alt="link to Kian's GitHub" />
               </a>
-              <a href="mailto:kian.miridoozini@gmail.com" target="_blank" rel="noopener noreferrer">
+              <a href="mailto:kian.miridoozini@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Kian Miridoozini">
                 <img src={navIcon3} alt="link to Kian's email" />
               </a>
             </div>
@@ -93,7 +93,7 @@ export const NavBar = () => {
               }}
               className={activeLink === "contact" ? "active navbar-link" : "navbar-link"}
             >
-              <button className="vvd">
+              <button className="vvd" aria-label="Let's connect">
                 <span>Let's Connect</span>
               </button>
             </HashLink>

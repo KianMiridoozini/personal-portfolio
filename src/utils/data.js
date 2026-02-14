@@ -3,12 +3,16 @@ import {
     backEndIcon,
     toolsIcon,
     interpersonalIcon,
-    easvIcon,
     web_1,
     web_2,
     web_3,
     web_4,
-
+    // experience logos
+    ITMesterenLogo,
+    BrandBarLogo,
+    // education logos
+    easvIcon,
+    seaIcon,
     ///photography
     // bbq 
     photo_bbq_1,
@@ -107,7 +111,7 @@ export const SKILLS = [
             { skill: "Wordpress", percentage: "75%" },
             { skill: "Tailwind", percentage: "70%" },
             { skill: "Bootstrap", percentage: "70%" },
-            { skill: "A.I", percentage: "85%" },
+            { skill: "AI", percentage: "85%" },
         ],
     },
     {
@@ -123,13 +127,34 @@ export const SKILLS = [
     },
 ];
 
+export const EXPERIENCE = [
+    {
+        title: "Web Development Intern",
+        company: "IT-Mesteren",
+        duration: "2025 (10 weeks)",
+        location: "Esbjerg, Denmark",
+        description: "During my internship at IT-Mesteren, I had the opportunity to work on various tasks, gaining hands-on experience with the development of custom Wordpress solutions. This experience allowed me to enhance my coding skills, understand real-world implementations, and improve my ability to work more effectively in a professional environment.",
+        logo: ITMesterenLogo,
+        link: "https://www.it-mesteren.dk",
+    },
+    {
+        title: "Multimedia Intern",
+        company: "Brand Bar",
+        duration: "2024 (10 weeks)",
+        location: "Budapest, Hungary",
+        description: "During my international internship in Hungary I was tasked to provide digital solutions such as designing logos and creating website prototypes, and general work regarding the brand identity of clients.",
+        logo: BrandBarLogo,
+        link: "https://www.brandbar.hu/",
+    }
+]
+
 export const EDUCATION = [
     {
         title: "Web Development",
-        institute: "Erhvervsakademi Sydvest",
-        duration: "2024 - Current",
+        institute: "Syddansk Erhvervsakademi",
+        duration: "2024 - 2026",
         location: "Esbjerg, Denmark",
-        logo: easvIcon,
+        logo: seaIcon,
         Description: [
             "I have honed my skills in both frontend and backend development. Gained experience with SQL and NoSQL databases to build robust server environments using frameworks ranging from the opinionated NestJS to more flexible options like Express. On the frontend, I develop dynamic applications with Vue, React, Laravel, and Angular, as well as custom solutions built from scratch using my own coding principles. Additionally, I design REST APIs, leverage GraphQL for efficient data querying, and implement AAA testing with Playwright.",
         ],

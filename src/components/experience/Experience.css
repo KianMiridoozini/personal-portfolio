@@ -1,17 +1,23 @@
-
 .vertical-timeline.vertical-timeline--two-columns:before {
     background: linear-gradient(180deg, rgba(var(--tertiary-color)) 80%, transparent);
 }
 
-#education h2,
 #experience h2 {
-    margin-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
 }
-#education h4,
+
 #experience h4 {
-    opacity: 0.5;
+        opacity: 0.5;
 }
-    
+
+#experience h4 a {
+        color: inherit;
+        text-decoration: none;
+}
+
+#experience h4 a:hover {
+        text-decoration: underline;
+}
 
 .vertical-timeline{
     place-self: center;
@@ -33,6 +39,7 @@
 .vertical-timeline-element-content {
     box-shadow: none;
 }
+
 .vertical-timeline-element-content:hover {
     box-shadow: 0 5px 10px rgba(var(--tertiary-color-2), 0.5);
 }
@@ -43,9 +50,11 @@
     border: none;
     padding: 0.3rem;
     box-shadow: 0 0 0 2px rgba(var(--quaternary-color));
+    border-radius: 50%;
     overflow: hidden;
     & img {
         width: 100%;
         height: auto;
+        border-radius: 50%;
     }
 }
